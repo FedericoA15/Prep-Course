@@ -22,7 +22,7 @@ function mayoriaDeEdad(edad) {
     return "Allowed";
   }
   else{
-    return "Not Allowed";
+    return "Not allowed";
   }
 }
   
@@ -57,7 +57,7 @@ function saludo(idioma) {
     return "Ni Hao!";
   }
   else if (idioma==="ingles"){
-    return "Hello";
+    return "Hello!";
   }
   else{
     return "Hola!";
@@ -116,19 +116,10 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
-  if(numero % 3 === 0){
-    return "fizz";
-  }
-  else if(numero % 5 === 0)
-  {
-    return "buzz";
-  }
-  else if (numero % 15 === 0){
-    return "fizzbuzz";
-  }
-  else{
-    return numero;
-  }
+  if(numero % 15 === 0) return 'fizzbuzz';
+  if(numero % 3 === 0) return 'fizz';
+  if(numero % 5 === 0) return 'buzz';
+  return numero;
 }
 
 function operadoresLogicos(num1, num2, num3) {
@@ -141,14 +132,14 @@ function operadoresLogicos(num1, num2, num3) {
   if(num1 < 0 || num2 < 0 || num3 < 0){
     return "Hay negativos";
   }
-  else if(num1<num2 && num1<num3){
+  else if (num1 === 0 || num2 === 0 || num3 === 0){
+    return "Error";
+  }
+  else if(num1>num2 && num1>num3){
     return "Número 1 es mayor y positivo";
   }
-  else if(num3<num1 && num3<num2){
+  else if(num3>num1 && num3>num2){
     return num3 + 1;
-  }
-  else if (num1 === 0|| num2 === 0|| num3 === 0){
-    return "Error";
   }
   else{
     return false;
@@ -180,9 +171,9 @@ function esVerdadero(valor){
   //Escribe tu código aquí
 if(valor===true)
 {
-  return "soy verdadero";
+  return "Soy verdadero";
 }
-return "soy falso";
+return "Soy falso";
 
 }
 
@@ -191,8 +182,8 @@ function tablaDelSeis(){
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
   let array6=[];
-  for(let i=1; i<10;i++){
-    array6.push(6*1);
+  for(let i=0; i<11;i++){
+    array6.push(6*i);
   }
   return array6;
 }
